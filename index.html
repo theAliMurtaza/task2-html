@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Internship registration and education details">
+    <title>Intern Registration</title>
+</head>
+<body>
+    <header>
+        <h1>Intern Registration Form</h1>
+        <p>Welcome to our internship program. Please provide your details to apply for the internship.</p>
+        <p>Fields marked with * are required.</p>
+    </header>
+    <main>
+        <h2>Application Form</h2>
+        <form action="/intern-registration" method="post" enctype="multipart/form-data">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <p>
+                    <label for="firstName">First Name: *</label><br>
+                    <input type="text" id="firstName" name="firstName" placeholder="Enter first name" autocomplete="given-name" required>
+                </p>
+                <p>
+                    <label for="lastName">Last Name: *</label><br>
+                    <input type="text" id="lastName" name="lastName" placeholder="Enter last name" autocomplete="family-name" required>
+                </p>
+                <p>
+                    <label for="email">Email Address: *</label><br>
+                    <input type="email" id="email" name="email" placeholder="example@gmail.com" autocomplete="email" required>
+                </p>
+                <p>
+                    <label for="phoneNumber">Phone Number: *</label><br>
+                    <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="03001234567" autocomplete="tel" required>
+                </p>
+                <p>
+                    <label for="dateOfBirth">Date of Birth: *</label><br>
+                    <input type="date" id="dateOfBirth" name="dateOfBirth" autocomplete="bday" required>
+                </p>
+                <p>
+                    <label for="password">Password: *</label><br>
+                    <input type="password" id="password" name="password" placeholder="Minimum 8 characters" minlength="8" autocomplete="new-password" required>
+                </p>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Internship Preferences</legend>
+                <p>
+                    <label for="interviewTime">Preferred Interview Time:</label><br>
+                    <input type="time" id="interviewTime" name="interviewTime">
+                </p>
+                <p>
+                    <label for="trainingMonth">Preferred Training Month:</label><br>
+                    <input type="month" id="trainingMonth" name="trainingMonth">
+                </p>
+                <p>
+                    <label for="trainingWeek">Preferred Training Week:</label><br>
+                    <input type="week" id="trainingWeek" name="trainingWeek">
+                </p>
+                <p>
+                    <label for="milestone">Current Learning Milestone: *</label><br>
+                    <select id="milestone" name="milestone" required>
+                        <option value="">Choose your current level</option>
+                        <optgroup label="Beginner">
+                            <option value="html">HTML Basics</option>
+                            <option value="css">CSS Basics</option>
+                        </optgroup>
+                        <optgroup label="Intermediate">
+                            <option value="javascript">JavaScript</option>
+                            <option value="react">React.js</option>
+                        </optgroup>
+                        <optgroup label="Advanced">
+                            <option value="backend">Backend Development</option>
+                            <option value="fullstack">Full Stack Development</option>
+                        </optgroup>
+                    </select>
+                </p>
+                <p>
+                    <label for="courseSearch">Search for a Course:</label><br>
+                    <input type="search" id="courseSearch" name="courseSearch" placeholder="Enter a course name">
+                </p>
+                <p>
+                    <label for="favoriteColor">Preferred Theme Color:</label><br>
+                    <input type="color" id="favoriteColor" name="favoriteColor" value="#3366cc">
+                </p>
+                <p>
+                    <label for="skillLevel">Skill Level (1 to 10):</label><br>
+                    <input type="range" id="skillLevel" name="skillLevel" min="1" max="10" step="1" value="5">
+                </p>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Areas of Interest</legend>
+                <p>Select the fields you are interested in:</p>
+
+                <p>
+                    <input type="checkbox" id="frontend" name="interests" value="frontend">
+                    <label for="frontend">Frontend Development</label>
+                </p>
+                <p>
+                    <input type="checkbox" id="backend" name="interests" value="backend">
+                    <label for="backend">Backend Development</label>
+                </p>
+                <p>
+                    <input type="checkbox" id="mobile" name="interests" value="mobile">
+                    <label for="mobile">Mobile App Development</label>
+                </p>
+                <p>
+                    <input type="checkbox" id="artificialIntelligence" name="interests" value="ai">
+                    <label for="artificialIntelligence">Artificial Intelligence</label>
+                </p>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Documents and Additional Information</legend>
+                <p>
+                    <label for="portfolioUrl">Portfolio URL:</label><br>
+                    <input type="url" id="portfolioUrl" name="portfolioUrl" placeholder="https://yourportfolio.com" autocomplete="url">
+                </p>
+                <p>
+                    <label for="resume">Upload Resume: *</label><br>
+                    <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+                    <br>
+                    <small>Accepted formats: PDF, DOC, DOCX</small>
+                </p>
+                <p>
+                    <label for="address">Home Address:</label><br>
+                    <textarea id="address" name="address" rows="4" cols="40" placeholder="Enter your address" autocomplete="street-address"></textarea>
+                </p>
+                <p>
+                    <label for="additionalNotes">Additional Notes:</label><br>
+                    <textarea id="additionalNotes" name="additionalNotes" rows="4" cols="40" placeholder="Write any additional information"></textarea>
+                </p>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Terms and Conditions</legend>
+                <p>
+                    <input type="checkbox" id="termsAccepted" name="termsAccepted" value="yes" required>
+                    <label for="termsAccepted">I confirm that the information provided is correct and agree to the terms and conditions. *</label>
+                </p>
+            </fieldset>
+            <p>
+                <button type="submit">Submit Registration</button>
+                <button type="reset">Reset Form</button>
+            </p>
+        </form>
+        <section>
+            <h2>Education and Course Summary</h2>
+            <p>The following table shows a sample applicant's education and completed courses.</p>
+
+            <table border="1">
+                <caption>Education and Course Details</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">No.</th>
+                        <th scope="col">Qualification / Course</th>
+                        <th scope="col">Institute</th>
+                        <th scope="col">Year</th>
+                        <th scope="col">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Matriculation</td>
+                        <td>High School</td>
+                        <td>2020</td>
+                        <td>Completed</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Intermediate</td>
+                        <td>College</td>
+                        <td>2022</td>
+                        <td>Completed</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>BS Software Engineering</td>
+                        <td>COMSATS University</td>
+                        <td>2026</td>
+                        <td>In Progress</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Web Development</td>
+                        <td>Online Course</td>
+                        <td>2025</td>
+                        <td>Completed</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th scope="row" colspan="4">Total Records</th>
+                        <td>4</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p><small>Internship Training Program - Day 02</small></p>
+    </footer>
+</body>
+</html>
